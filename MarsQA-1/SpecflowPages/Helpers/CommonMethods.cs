@@ -17,7 +17,7 @@ namespace MarsQA_1.Helpers
 
         public class SaveScreenShotClass
         {
-            
+
             public static string SaveScreenshot(IWebDriver driver, string ScreenShotFileName) // Definition
             {
                 var folderLocation = (ConstantHelpers.ScreenshotPath);
@@ -55,5 +55,3 @@ namespace MarsQA_1.Helpers
     #endregion
 
 }
-
-

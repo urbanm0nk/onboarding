@@ -14,13 +14,15 @@ namespace MarsQA_1.Utils
     [Binding]
     public class Start : Driver
     {
+        private const string FileName = @"C:\Users\USER\myproject\Onboard\onboarding.specflow-master\MarsQA-1\SpecflowTests\Data";
 
         [BeforeScenario]
         public void Setup()
         {
             //launch the browser
             Initialize();
-            ExcelLibHelper.PopulateInCollection(@"MarsQA-1\SpecflowTests\Data\Mars.xlsx", "Credentials");
+            ExcelLibHelper.PopulateInCollection(@"C:\Users\USER\myproject\Onboard\onboarding.specflow-master\MarsQA-1\SpecflowTests\Data", "Credentials");
+            ExcelLibHelper.PopulateInCollection(FileName, "Credentials");
             //call the SignIn class
             SignIn.SigninStep();
         }
